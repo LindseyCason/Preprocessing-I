@@ -133,9 +133,35 @@ table {
 html,
 body {
   height: 100%;
+  background-color: #dfdfdf;
 }
-@media screen and (max-width: 800px) {
-  display: none;
+.starGrey {
+  font-family: 'Permanent Marker', cursive;
+  color: #67CEB2;
+  font-size: 4vw;
+}
+@media screen and (max-width: 500px) {
+  .noImage {
+    display: none;
+  }
+}
+.topNav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.topNav a {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+  text-decoration: none;
+  color: #81898f;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5rem;
+}
+.topNav a:hover {
+  background: #67CEB2;
 }
 .backgroundHeader {
   display: flex;
@@ -148,9 +174,11 @@ body {
   color: mediumaquamarine;
   font-family: 'Barriecito', cursive;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .backgroundHeader {
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 .backgroundHeader .text {
@@ -161,16 +189,16 @@ body {
 .backgroundHeader h2 {
   font-family: 'Amatic SC', cursive;
   font-size: 3rem;
-  color: #dfdfdf;
+  color: #67CEB2;
   max-width: 100%;
   border-bottom: 2px dotted #67CEB2;
   line-height: 6rem;
 }
 .backgroundHeader img {
-  max-width: 100%;
+  max-width: 90%;
   border-radius: 5%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .backgroundHeader img {
     display: none;
   }
@@ -186,43 +214,177 @@ body {
   background: #dfdfdf;
   display: flex;
   justify-content: space-around;
-  width: 25%;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   line-height: 1.5rem;
   border-radius: 10px;
   border: 1px solid black;
-  margin-top: 20px;
+  margin: 20px 20px 0px 0px;
+}
+@media screen and (max-width: 500px) {
+  .backgroundHeader .topButton .button {
+    width: 100%;
+  }
 }
 .backgroundHeader .topButton a {
   font-family: 'Amatic SC', cursive;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 3vw;
   color: #81898f;
 }
 .mainPageContent {
   display: flex;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5vw;
+}
+@media screen and (max-width: 500px) {
+  .mainPageContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .mainPageContent .leftContainer {
-  background-color: #dfdfdf;
-  color: #81898f;
+  background-color: #67CEB2;
+  box-shadow: 5px 10px 30px;
+  color: black;
   font-family: 'Comfortaa', cursive;
   margin-right: 5px;
-  max-width: 45%;
+  padding: 20px;
+  max-width: 52.63157895%;
+}
+@media screen and (max-width: 500px) {
+  .mainPageContent .leftContainer {
+    max-width: 100%;
+  }
 }
 .mainPageContent .leftContainer p {
   margin: 5%;
+  text-align: justify;
+}
+.mainPageContent .leftContainer h2 {
+  margin-bottom: 2vw;
+  font-size: 3vw;
+  font-family: 'Amatic SC', cursive;
+}
+.mainPageContent .leftContainer h3 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.mainPageContent .leftContainer .leftParagraph {
+  width: 100%;
+  padding: 10px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right-style: dotted;
 }
 .mainPageContent .rightContainer {
-  background-color: #dfdfdf;
-  color: #81898f;
+  background-color: white;
+  color: black;
   font-family: 'Comfortaa', cursive;
-  margin-left: 5px;
   max-width: 45%;
+  padding: 20px;
+  box-shadow: 5px 10px 30px;
+}
+@media screen and (max-width: 500px) {
+  .mainPageContent .rightContainer {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+}
+.mainPageContent .rightContainer h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3vw;
+  margin-bottom: 3vw;
 }
 .mainPageContent .rightContainer p {
-  text-align: right;
   margin: 5%;
+  text-align: justify;
+  font-weight: bold;
+  max-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .mainPageContent .rightContainer p {
+    margin: 0%;
+    text-align: center;
+  }
+}
+.mainPageContent .rightContainer .rightParagraph {
+  background: white;
+  border-left: 2px solid black;
+  border-bottom: 2px dotted black;
+  width: 100%;
+  padding: 0vw 0vw 2vw 2vw;
+  margin-right: 0px;
+}
+.mainPageContent .rightContainer .rightParagraph .goodStar {
+  font-family: 'Permanent Marker', cursive;
+  color: #67CEB2;
+  font-size: 4vw;
+}
+.downArrow {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 8vw;
+}
+.bottomContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5vw;
+}
+@media screen and (max-width: 500px) {
+  .bottomContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bottomContainer .contact {
+  border-top: 2px solid black;
+  border-right: 2px dotted black;
+  margin: 2vw;
+}
+.bottomContainer .contact h2 {
+  margin: 2vw 2vw 2vw 0vw;
+  font-size: 4vw;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+}
+.bottomContainer .contact .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2vw;
+  padding: 2vw;
+  line-height: 0.75vw;
+  font-family: 'Comfortaa', cursive;
+}
+.bottomContainer .contact .info p {
+  padding: 1vw;
+}
+.bottomContainer img {
+  padding: 2vw;
+  background-color: #67CEB2;
+  border-left: 2px solid black;
+  border-top: 2px dotted black;
+  margin: 2vw 0vw 0vw 2vw;
+  width: 60%;
+  height: 100%;
+  box-shadow: -5px -5px 30px;
+}
+@media screen and (max-width: 500px) {
+  .bottomContainer img {
+    display: none;
+  }
 }
